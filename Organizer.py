@@ -37,7 +37,7 @@ def organize_selected_folder():
     root.withdraw()
     root.attributes('-topmost', True)
     
-    print("👉 Pop-up window mein wo folder select kar jisko organize karna hai...")
+    print("Pop-up window mein wo folder select kar jisko organize karna hai...")
     target_folder = filedialog.askdirectory(title="Select Folder to Organize")
 
     if not target_folder:
@@ -45,7 +45,7 @@ def organize_selected_folder():
         return
 
     print("\n==================================================")
-    print(f"📂 SCANNING FULL FOLDER: {target_folder}")
+    print(f"SCANNING FULL FOLDER: {target_folder}")
     print("==================================================\n")
 
     files = os.listdir(target_folder)
@@ -71,13 +71,13 @@ def organize_selected_folder():
         
         try:
             shutil.move(item_path, final_dest)
-            print(f"✅ Moved: {item[:25]:25} ---> 📁 {category_name}/")
+            print(f"Moved: {item[:25]:25} ---> {category_name}/")
             moved_count += 1
         except Exception as e:
-            print(f"⚠️ Skipped {item} (File khuli hui hai): {e}")
+            print(f"Skipped {item} (File khuli hui hai): {e}")
 
     print("\n==================================================")
-    print(f"🎉 COMPLETE! Total {moved_count} files organize ho gayin!")
+    print(f"COMPLETE! Total {moved_count} files organize ho gayin!")
     print("==================================================")
 
 if __name__ == "__main__":
