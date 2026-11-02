@@ -41,7 +41,7 @@ def organize_selected_folder():
     target_folder = filedialog.askdirectory(title="Select Folder to Organize")
 
     if not target_folder:
-        print("❌ Tune koi folder select nahi kiya!")
+        print("Tune koi folder select nahi kiya!")
         return
 
     print("\n==================================================")
